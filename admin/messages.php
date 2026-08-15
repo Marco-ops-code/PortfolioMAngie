@@ -44,7 +44,7 @@ if (dbAvailable()) {
 
 <div class="admin-card">
   <?php if (!$messages): ?>
-    <p style="margin: 0; color: var(--muted);">Aucun message pour le moment.</p>
+    <p class="admin-empty">Aucun message pour le moment.</p>
   <?php else: ?>
     <div class="table-responsive">
       <table class="table-admin">

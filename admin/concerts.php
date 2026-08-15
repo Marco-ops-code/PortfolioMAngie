@@ -71,7 +71,7 @@ if (dbAvailable()) {
 <?php endif; ?>
 
 <div class="admin-card mb-4">
-  <h2 class="display" style="font-size: 1.6rem; margin-bottom: 1.25rem;">Ajouter une date</h2>
+  <h2 class="display admin-card-title">Ajouter une date</h2>
   <?php if (!dbAvailable()): ?>
     <p style="color: var(--muted); margin: 0;">Connectez MySQL pour ajouter des concerts en base.</p>
   <?php else: ?>
@@ -114,7 +114,7 @@ if (dbAvailable()) {
 </div>
 
 <div class="admin-card">
-  <h2 class="display" style="font-size: 1.6rem; margin-bottom: 1.25rem;">Liste</h2>
+  <h2 class="display admin-card-title">Liste</h2>
   <div class="table-responsive">
     <table class="table-admin">
       <thead>

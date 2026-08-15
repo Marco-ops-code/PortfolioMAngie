@@ -31,21 +31,63 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Track play UI (demo — branche un <audio> réel si besoin) */
+  /* Track play UI */
   playButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const wasPlaying = btn.classList.contains("is-playing");
+      const id = btn.getAttribute("data-track-id");
       playButtons.forEach((b) => {
         b.classList.remove("is-playing");
         b.setAttribute("aria-pressed", "false");
-        b.innerHTML = playIcon();
+        b.innerHTML = b.classList.contains("btn-listen") ? listenPlay() : playIcon();
       });
+      document.querySelectorAll(".track-item").forEach((row) => row.classList.remove("is-current"));
       if (!wasPlaying) {
-        btn.classList.add("is-playing");
-        btn.setAttribute("aria-pressed", "true");
-        btn.innerHTML = pauseIcon();
+        playButtons.forEach((b) => {
+          if (id && b.getAttribute("data-track-id") === id) {
+            b.classList.add("is-playing");
+            b.setAttribute("aria-pressed", "true");
+            b.innerHTML = b.classList.contains("btn-listen") ? listenPause() : pauseIcon();
+          }
+        });
+        document.querySelectorAll(".track-item").forEach((row) => {
+          const play = row.querySelector("[data-play]");
+          if (id && play && play.getAttribute("data-track-id") === id) {
+            row.classList.add("is-current");
+          }
+        });
       }
     });
+  });
+
+  function listenPlay() {
+    return `<span class="btn-listen-disc"><svg viewBox="0 0 24 24"><path d="M8.4 6.2v11.6L18.2 12Z"/></svg></span>`;
+  }
+
+  function listenPause() {
+    return `<span class="btn-listen-disc"><svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg></span>`;
+  }
+
+  /* Genre filters */
+  const filters = document.querySelectorAll(".music-filter, .listen-door");
+  const rows = document.querySelectorAll(".track-item[data-genres]");
+
+  const applyFilter = (key) => {
+    document.querySelectorAll(".music-filter").forEach((btn) => {
+      btn.classList.toggle("is-on", btn.getAttribute("data-filter") === key);
+    });
+    rows.forEach((row) => {
+      const genres = (row.getAttribute("data-genres") || "").split(/\s+/);
+      const show = key === "all" || genres.includes(key);
+      row.hidden = !show;
+    });
+    if (key !== "all") {
+      document.querySelector(".track-list")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  filters.forEach((btn) => {
+    btn.addEventListener("click", () => applyFilter(btn.getAttribute("data-filter") || "all"));
   });
 
   function playIcon() {

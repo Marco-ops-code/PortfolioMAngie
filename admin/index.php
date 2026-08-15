@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="admin-body">
-  <div class="admin-wrap" style="max-width: 420px; padding-top: 6rem;">
+  <div class="admin-wrap admin-wrap-login">
     <p class="eyebrow">Espace artiste</p>
     <h1 class="display display-md" style="margin-bottom: 1.5rem;">Connexion</h1>
 
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </form>
     </div>
 
-    <p style="margin-top: 1.5rem;"><a href="../index.php">← Retour au site</a></p>
+    <p class="admin-back"><a href="../index.php">← Retour au site</a></p>
   </div>
 </body>
 </html>

@@ -22,7 +22,7 @@ $adminPage = $adminPage ?? 'dashboard';
 </head>
 <body class="admin-body">
   <div class="admin-wrap">
-    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-3">
+    <div class="admin-top">
       <div>
         <p class="eyebrow"><?= e(SITE_NAME) ?></p>
         <h1 class="display display-md"><?= e($pageTitle ?? 'Dashboard') ?></h1>

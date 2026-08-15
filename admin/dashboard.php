@@ -39,12 +39,11 @@ if (dbAvailable()) {
 </div>
 
 <div class="admin-card">
-  <h2 class="display" style="font-size: 1.8rem; margin-bottom: 1rem;">Bienvenue</h2>
-  <p style="color: var(--ink-soft); margin-bottom: 0;">
+  <h2 class="display admin-card-title">Bienvenue</h2>
+  <p class="admin-note">
     Gérez les concerts et les messages reçus depuis le formulaire de contact.
     <?php if (!dbAvailable()): ?>
       <br><br><strong>MySQL non connecté.</strong> Importez <code>sql/schema.sql</code> puis ajustez <code>includes/config.php</code>.
-      Le site fonctionne déjà en mode démo.
     <?php endif; ?>
   </p>
 </div>

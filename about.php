@@ -59,42 +59,44 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<section class="section" style="padding-top: 0;">
+<section class="section section-milestones">
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Temps forts</p>
-      <h2 class="display display-md">Repères</h2>
+      <h2 class="display display-md">Le fil de la voix</h2>
+      <p class="lede">Trois chapitres, une même ligne : la technique, le feu, puis la signature.</p>
     </div>
 
-    <ul class="track-list">
-      <li class="track-item reveal">
-        <span class="track-num">01</span>
-        <div class="track-meta">
-          <h3>Formation classique</h3>
-          <p>Conservatoire — technique vocale &amp; répertoire</p>
+    <ol class="milestone-line">
+      <li class="milestone reveal">
+        <span class="milestone-step">01</span>
+        <span class="milestone-node" aria-hidden="true"></span>
+        <div class="milestone-body">
+          <p class="milestone-tag">Fondation</p>
+          <h3>Le classique</h3>
+          <p>La respiration, la précision, le respect du texte. Une voix posée, capable de tenir le silence autant que la phrase.</p>
         </div>
-        <span class="track-duration">Fondation</span>
-        <div class="track-links"><span></span></div>
       </li>
-      <li class="track-item reveal reveal-delay-1">
-        <span class="track-num">02</span>
-        <div class="track-meta">
-          <h3>Chœurs &amp; gospel live</h3>
-          <p>Scènes communautaires, festivals spirituels</p>
+      <li class="milestone reveal reveal-delay-1">
+        <span class="milestone-step">02</span>
+        <span class="milestone-node" aria-hidden="true"></span>
+        <div class="milestone-body">
+          <p class="milestone-tag">Racines</p>
+          <h3>Le gospel</h3>
+          <p>Les chœurs, la scène partagée, l’élan collectif. C’est là que la voix s’ouvre — et que l’émotion se transmet sans filtre.</p>
         </div>
-        <span class="track-duration">Racines</span>
-        <div class="track-links"><span></span></div>
       </li>
-      <li class="track-item reveal reveal-delay-2">
-        <span class="track-num">03</span>
-        <div class="track-meta">
-          <h3>Projet solo « Lumière Intérieure »</h3>
-          <p>Album / EP — R&amp;B, classique &amp; gospel</p>
+      <li class="milestone reveal reveal-delay-2">
+        <span class="milestone-step">03</span>
+        <span class="milestone-node" aria-hidden="true"></span>
+        <div class="milestone-body">
+          <p class="milestone-tag">Présent</p>
+          <h3>La signature</h3>
+          <p>R&amp;B, classique et gospel dans une même présence. Un projet solo, des formats live, une voix enfin à elle.</p>
+          <a class="milestone-link" href="music.php">Écouter le projet</a>
         </div>
-        <span class="track-duration">Présent</span>
-        <div class="track-links"><a href="music.php">Écouter</a></div>
       </li>
-    </ul>
+    </ol>
 
     <div class="cta-row reveal">
       <a class="btn-mangie" href="contact.php">Inviter Angela</a>

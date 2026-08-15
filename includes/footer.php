@@ -4,6 +4,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
+          <img class="footer-logo" src="assets/img/logo-aml.png" alt="AML">
           <p class="footer-name"><?= e(SITE_NAME) ?></p>
           <p class="footer-tag"><?= e(SITE_TAGLINE) ?></p>
         </div>

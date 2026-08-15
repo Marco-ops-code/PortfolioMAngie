@@ -649,6 +649,101 @@ a {
   font-size: 0.95rem;
 }
 
+/* ---------- Temps forts / parcours ---------- */
+.section-milestones {
+  padding-top: 0;
+}
+
+.milestone-line {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 2.25rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  position: relative;
+}
+
+.milestone-line::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 3.15rem;
+  height: 1px;
+  background:
+    linear-gradient(var(--copper-soft), var(--copper-soft)) 0 0 / 100% 1px no-repeat,
+    linear-gradient(rgba(184, 121, 74, 0.35), rgba(184, 121, 74, 0.35)) 0 4px / 100% 1px no-repeat,
+    linear-gradient(rgba(184, 121, 74, 0.2), rgba(184, 121, 74, 0.2)) 0 -4px / 100% 1px no-repeat;
+}
+
+.milestone {
+  position: relative;
+  text-align: center;
+  padding-top: 0.35rem;
+}
+
+.milestone-step {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 1.15rem;
+}
+
+.milestone-node {
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: var(--copper);
+  box-shadow: 0 0 0 6px var(--cream-mist), 0 0 0 7px rgba(184, 121, 74, 0.45);
+  position: relative;
+  z-index: 1;
+}
+
+.milestone-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 500;
+  margin: 0 0 0.45rem;
+}
+
+.milestone-body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.15rem);
+  font-weight: 500;
+  margin: 0 0 0.7rem;
+  line-height: 1.15;
+}
+
+.milestone-body p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+.milestone-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wine);
+  border-bottom: 1px solid var(--copper-soft);
+  padding-bottom: 0.15rem;
+}
+
+.milestone-link:hover {
+  color: var(--wine-deep);
+}
+
 .track-list {
   list-style: none;
   padding: 0;
@@ -1054,6 +1149,19 @@ a {
   margin-bottom: 3rem;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: min(11.5rem, 70%);
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
 .footer-name {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -1251,6 +1359,47 @@ a {
 
   .genre-item:last-child {
     border-bottom: 0;
+  }
+
+  .milestone-line {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 0;
+    padding-left: 1.75rem;
+  }
+
+  .milestone-line::before {
+    left: 0.38rem;
+    right: auto;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, var(--copper-soft), rgba(184, 121, 74, 0.25));
+  }
+
+  .milestone {
+    text-align: left;
+    padding: 0 0 2.25rem 1.25rem;
+  }
+
+  .milestone:last-child {
+    padding-bottom: 0;
+  }
+
+  .milestone-step {
+    margin-bottom: 0.35rem;
+  }
+
+  .milestone-node {
+    position: absolute;
+    left: -1.75rem;
+    top: 0.45rem;
+    margin: 0;
+  }
+
+  .milestone-body p {
+    margin-inline: 0;
   }
 
   .track-item {
